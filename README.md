@@ -17,8 +17,11 @@ We evaluated multiple forecasting models to identify the most effective approach
 The models tested included:
  
 Statistical --> ARIMA, Prophet --> Simple, fast, limited to linear patterns
+
 Machine Learning --> XGBoost --> Strong with features, lacks sequence awareness
+
 Deep Learning --> LSTM, mLSTM, sLSTM, xLSTM --> Good for sequences, but high training cost
+
 Transformer-based --> PatchTST --> Best overall performance, captures complex dependencies
  
 The main contribution of PatchTST lies in its use of patch-based representation and channel-independent attention, making it especially suited for capturing non-linear temporal dependencies in financial data.
@@ -45,12 +48,9 @@ Model Results with Twitter-Enhanced Sentiment Integration
 To assess the impact of Twitter sentiment on Bitcoin price forecasting, we designed a three-way evaluation:
 Full historical data (2015–2025)
 
-
 Shorter historical window (2015–2019)
 
-
 Historical data (2015–2019) + Twitter sentiment
-
 
 This setup was tested across various models, including LSTM variants and TSTPlus, a Transformer-based model used in place of PatchTST due to integration limitations.
 The results showed mixed effects.
